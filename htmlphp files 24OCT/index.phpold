@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">--!>
+     <link rel="manifest" href="manifest.json">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           <!-- iPhone WEb App Conversion -->
+                <link href="iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image">
+                <link href="iphonex_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+        <link rel="apple-touch-icon" href="splashscreens/digitalCanvas.png"  >
+      <meta name="apple-mobile-web-app-title" content="Canvas">
+	<!-- SPLASHSCREENS --!>
+	<link rel="mask-icon" href="iphonex_splash.png" color="#5bbad5">
+	<link href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+	<link rel="apple-touch-startup-image" href="iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"  />
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="/iphonex_splash.png">
+	<link href="splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link href="splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+	<link rel="apple-touch-startup-image" href="iphonex_splash.png">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+     <title>Canvas</title>
+  </head>
+
+<body style="background-color: #f2f2f2" >
+
+      <!-- Navbar -->
+      <div class="w3-top">
+         <div id="main" class="w3-bar w3-card-2" style="color:white">
+            <div id="main2" class="w3-continer" align="center" style="background-color: #456096; color:white;">Canvas
+           </div>
+         </div>
+        </div>
+
+
+
+<div id="uploadBAR" class="w3-center w3-round-large w3-card" style="padding-top: 10px; padding-bottom: 10px; background-color: #fcfcfc; margin-top:35px; margin-bottom: 10px; margin-left: 5px; margin-right: 5px; box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);" >
+<form id="uploadFORM" style="width: 150px; margin-top: 0px; display:inline-block" action="upload.php" method="post" enctype="multipart/form-data">
+    Upload Image:
+    <input id="fileUPLOAD" class="w3-center w3-button  w3-round-xlarge" style="color: white; background-color: #456096; position: absolute; left: 2%; margin:2px; width: 95vw; display:inline" type="file" name="fileToUpload" id="fileToUpload">
+    <input id="fileSUBMIT" class="w3-button  w3-round-xlarge" style="color: white; background-color: #456096; margin:1px; margin-top: 30px; display: inline-block" type="submit" value="Upload Image" name="submit">
+</form>
+
+<form style="display: inline-block" action="restartViewer.php">
+	<input id="resetCAROUSEL" class="w3-button w3-round-xlarge" style="color: white; background-color: #456096; margin:1px; margin-top: 30px" type="submit" value="Reset Carousel">
+</form>
+
+<button id="showEditButton" class="w3-button  w3-round-xlarge" style="color: white; background-color: #456096; display: inline; margin:2px; margin-top: 30px; width: 50px"  onClick="openEdit()"><i class="fa fa-edit"></i></button>
+<button id="hideEditButton" class="w3-button  w3-round-xlarge w3-red" style="color: white; display: none; margin: 2px; margin-top: 30px; width: 50px" onClick="closeEdit()"><i class="fa fa-close"></i></button>
+
+</div>
+</div>
+
+<div style="margin-top: 25px" class="w3-center" id="photoPane">
+<?php
+$files = glob("/home/pi/Pictures/*.*");
+
+for ($i=0; $i<count($files); $i++) {
+    $image = $files[$i];
+    $style = "height:90%; width:90%; box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);";
+    $w3class = "w3-center";
+    echo '<div id="'.$image .'" >';
+    echo '<form action="setImage.php" method="get">';
+    echo '<input hidden="true" type="text" name="name" value="'.$image .'">';
+    echo '<input style="'.$style .'" type="image" class="w3-round-large" name="photo"  id="photo"  src="'.$image .'" alt="'.$image .'" />'."<br /><br />";
+    echo '</form>';
+    echo '</div>';
+}
+
+?>
+</div>
+
+<div hidden="true" style="margin-top: 25px" class="w3-center" id="editPane">
+<h2 class="w3-center"> Delete Images </h2>
+<?php
+$files = glob("/home/pi/Pictures/*.*");
+
+for ($i=0; $i<count($files); $i++) {
+    $image = $files[$i];
+    $style = "height:90%; width:90%; box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.2);";
+    $w3class = "w3-center";
+    echo '<div id="'.$image .'" >';
+    echo '<form action="deleteImage.php" method="get">';
+    echo '<input hidden="true" type="text" name="name" value="'.$image .'">';
+    echo '<input style="'.$style .'" type="image" name="photo"  id="photo"  src="'.$image .'" alt="Random image" />'."<br /><br />";
+    echo '</form>';
+    echo '</div>';
+}
+
+?>
+
+
+<script>
+
+	function openEdit(){
+	document.getElementById("photoPane").style.display= "none";
+	document.getElementById("editPane").style.display= "block";
+	//document.getElementById("main").classList.replace("w3-teal", "w3-red");
+	document.getElementById("main2").classList.replace("w3-teal", "w3-red");
+	//document.getElementById("uploadFORM").hidden= "true";
+	document.getElementById("fileUPLOAD").classList.replace("w3-teal", "w3-red");
+	document.getElementById("fileSUBMIT").classList.replace("w3-teal", "w3-red");
+	document.getElementById("resetCAROUSEL").classList.replace("w3-teal", "w3-red");
+	document.getElementById("hideEditButton").style.display= "inline-block";
+	document.getElementById("showEditButton").style.display= "none";
+
+
+	}
+
+
+        function closeEdit(){
+        document.getElementById("photoPane").style.display= "block";
+        document.getElementById("editPane").style.display= "none";
+        //document.getElementById("main").classList.replace("w3-teal", "w3-red");
+        document.getElementById("main2").classList.replace("w3-red", "w3-teal");
+        //document.getElementById("uploadFORM").hidden= "true";
+        document.getElementById("fileUPLOAD").classList.replace("w3-red", "w3-teal");
+        document.getElementById("fileSUBMIT").classList.replace("w3-red", "w3-teal");
+        document.getElementById("resetCAROUSEL").classList.replace("w3-red", "w3-teal");
+        document.getElementById("hideEditButton").style.display= "none";
+        document.getElementById("showEditButton").style.display= "inline-block";
+
+
+        }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
