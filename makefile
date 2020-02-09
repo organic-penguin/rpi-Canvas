@@ -12,7 +12,6 @@ install_prerequisites:
 	@echo "Installing JQ"
 	sudo apt-get install jq -y
 
-
 apply_config_modifications:
 	@echo "Installing modifications to configuration files for Apache"
 	sudo cp -f /home/pi/rpi-Canvas/config_files/etc/apache2/apache2.conf  /etc/apache2/
@@ -34,3 +33,7 @@ install_Canvas:
 install_homekit:
 	@echo "Installing Homekit"
 	sh /home/pi/rpi-Canvas/install_homekit.sh
+	@echo "Installing NPM Forever"
+	sudo npm install forever -g
+	@echo "Installing sleep"
+	sudo npm install --unsafe-perm sleep
