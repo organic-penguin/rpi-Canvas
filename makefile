@@ -1,4 +1,4 @@
-all: install_homekit
+all: install_prerequisites apply_config_modifications install_Canvas install_homekit
 
 install_prerequisites:
 	@echo "Getting Updates"
