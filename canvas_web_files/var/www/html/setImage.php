@@ -15,7 +15,7 @@
 		$contentsDecoded['rotating'] = $picturePath;
 		$jsonEditComplete = json_encode($contentsDecoded);
 		file_put_contents('/var/www/html/settings.json', $jsonEditComplete);
-		
+
 		$output = shell_exec('sh /var/www/html/setImage.sh "'.$picturePath .'"');
 		echo "$output";
 		?>
@@ -23,7 +23,7 @@
 
 		<div style="position: absolute; top:50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
 			<i style="font-size: 400px; color: white;" class="fa fa-upload fa-5x"></i>
-		</div>	
+		</div>
 
 <script language="javascript">
 

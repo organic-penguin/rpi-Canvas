@@ -9,7 +9,7 @@ file_put_contents('/var/www/html/settings.json', $jsonEditComplete);
 
 
 shell_exec("sh /var/www/html/pictureFrame.sh");
-#header('Location: http://172.16.0.39/index.php?restartViewer=true');
+#header('Location: http://127.0.0.1/index.php?restartViewer=true');
 
 ?>
 <script language="javascript">

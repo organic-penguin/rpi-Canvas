@@ -9,6 +9,6 @@ if [ $ROTATINGSTATUS = true ]; then
 	echo $TIMER
 else
 	echo "The value of the rotating status is" $ROTATINGSTATUS
-	sudo fbi -noverbose -a -T 3 $ROTATINGSTATUS
+	sudo fbi -noverbose -a -T 2 $ROTATINGSTATUS
 	echo Input received -$1- | wall
 fi

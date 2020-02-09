@@ -1,4 +1,4 @@
-all: apply_config_modifications install_Canvas
+all: install_prerequisites apply_config_modifications install_Canvas
 
 install_prerequisites:
 	@echo "Getting Updates"
@@ -9,6 +9,8 @@ install_prerequisites:
 	sudo apt-get install php -y
 	@echo "Installing FBI"
 	sudo apt-get install fbi -y
+	@echo "Installing JQ"
+	sudo apt-get install jq -y
 
 
 apply_config_modifications:
@@ -22,9 +24,10 @@ apply_config_modifications:
 install_Canvas:
 	@echo "Copying Canvas' Apache operation files and scripts"
 	sudo cp -r /home/pi/rpi-Canvas/canvas_web_files/var/www/html /var/www
-	@echo "Giving world permission to read and write in Pictures"
-	sudo chmod +666 /home/pi/Pictures
+	@echo "Giving world permission to read and write in Pictures and Canvas settings.json"
+	sudo chmod +666 /home/pi/Pictures /var/www/html/settings.json
 	@echo "Removing index.html for preference of index.php"
 	sudo rm -f /var/www/html/index.html
 	@echo "Adding execution priviliges to apache scripts"
 	sudo chmod +777 /var/www/html/setImage.sh /var/www/html/pictureFrame.sh /var/www/html/deleteImage.sh 
+
