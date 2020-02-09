@@ -1,4 +1,4 @@
-all: install_prerequisites apply_config_modifications install_Canvas
+all: install_homekit
 
 install_prerequisites:
 	@echo "Getting Updates"
@@ -31,3 +31,6 @@ install_Canvas:
 	@echo "Adding execution priviliges to apache scripts"
 	sudo chmod +777 /var/www/html/setImage.sh /var/www/html/pictureFrame.sh /var/www/html/deleteImage.sh 
 
+install_homekit:
+	@echo "Installing Homekit"
+	sh /home/pi/rpi-Canvas/install_homekit.sh
