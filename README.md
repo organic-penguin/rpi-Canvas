@@ -31,8 +31,11 @@ Control of the Canvas being on/off is controllable through Apple's Siri and Amaz
 
 
 # Configuration
+
 **Configuring Homekit Accessory**
+
 Use your favorite text editor to view 
+
 ```/home/pi/rpi-Canvas/support_frameworks/HAP-NodeJS/accessories/Outlet_accessory.js```
 
 
