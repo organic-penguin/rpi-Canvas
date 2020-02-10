@@ -44,6 +44,13 @@ Use your favorite text editor to view
 The fbi framework that is used to publish images to the HDMI output requires a 'Terminal' to be selected. This is defaulted to 2 and has worked correctly on a Raspberry Pi Model 3b+ and Raspberry Pi Model Zero W. If your device has selected a different 'Terminal' as the HDMI output run
 ```fbi -noverbose -a -u -t 6 -T 2 /home/pi/Pictures/* ``` where -T 2 is replaced with -T # 
 
+# To-Do
+
+* Add Alexa Control
+
+* Add Google Assistant Control
+
+* Correct minor UI Element Issues
 
 # Credits
 [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) by KhaosT
