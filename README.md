@@ -47,7 +47,11 @@ The fbi framework that is used to publish images to the HDMI output requires a '
 
 # Credits
 [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) by KhaosT
+
 [QuickPi](https://www.youtube.com/watch?v=3RmuXn8eS9s&t=21s)
+
 [FIM: fbi](https://www.nongnu.org/fbi-improved/)
+
 [Apache Software Foundation](https://httpd.apache.org/)
+
 
