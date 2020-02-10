@@ -2,7 +2,7 @@
 Digital photo frame repository for Raspberry Pi based upon fbi, Apache2, and HAP-NodeJS
 
 ![npm](https://img.shields.io/badge/npm-v8.2.1-brightgreen)
-[![Donate](https://img.shields.io/badge/donate-paypal-yellowgreen.svg)]()
+[![Donate](https://img.shields.io/badge/donate-paypal-yellowgreen.svg)](https://www.paypal.com/paypalme2/usafbeaty?locale.x=en_US)
 
 # Raspberry Pi Canvas 
 
