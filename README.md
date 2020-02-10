@@ -29,19 +29,39 @@ Control of the Canvas being on/off is controllable through Apple's Siri and Amaz
 
 * `make`
 
+**Start Services Upon Boot-Up**
+
+* `sudo nano /etc/rc.local`
+
+* Add `sudo sh /home/pi/rpi-Canvas/rpiStartup.sh` just before the final line `'exit 0'`
+
 
 # Configuration
 
 **Configuring Homekit Accessory**
 
-Use your favorite text editor to view 
+Use your favorite text editor to make adjustments. The name of the device can also be changed once added to Homekit, from the 'Home' app
 
 ```/home/pi/rpi-Canvas/support_frameworks/HAP-NodeJS/accessories/Outlet_accessory.js```
+
+**Install Web App (iPhone)**
+
+Install the web application to your iPhone homescreen to quickly access your Raspberry Pi
+
+* Navigate to your Raspberry Pi through `IP address` or `'hostname'.local`
+
+* Hit the *Share* button and select to 'Add to Home Screen'
+
+* Name the App or leave default
+
+* Select *Add*
+
 
 # Troubleshooting
 
 **Images Not Appearing When Selected**
-The fbi framework that is used to publish images to the HDMI output requires a 'Terminal' to be selected. This is defaulted to 2 and has worked correctly on a Raspberry Pi Model 3b+ and Raspberry Pi Model Zero W. If your device has selected a different 'Terminal' as the HDMI output run ```fbi -noverbose -a -u -t 6 -T 2 /home/pi/Pictures/* ``` where '2' is replaced with a number between 1 and 3 until your images are displayed
+
+The fbi framework that is used to publish images to the HDMI output requires a 'Terminal' to be selected. This is defaulted to 2 and has worked correctly on a Raspberry Pi Model 3b+ and Raspberry Pi Model Zero W. If your device has selected a different 'Terminal' as the HDMI output run ```sudo nano /var/www/html/settings.json ``` where "terminal":2 is replaced with a number between 1 and 5 until your images are displayed
 
 # To-Do
 
@@ -59,5 +79,7 @@ The fbi framework that is used to publish images to the HDMI output requires a '
 [FIM: fbi](https://www.nongnu.org/fbi-improved/)
 
 [Apache Software Foundation](https://httpd.apache.org/)
+
+[Croppie](https://github.com/foliotek/croppie) by Foliotek
 
 
