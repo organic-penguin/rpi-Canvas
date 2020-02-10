@@ -1,8 +1,22 @@
 # rpi-Canvas
 Digital photo frame repository for Raspberry Pi based upon fbi, Apache2, and HAP-NodeJS
 
-![npm](https://img.shields.io/badge/npm-v8.2.1-brightgreen)
+![node](https://img.shields.io/badge/node-v8.2.1-brightgreen)
 [![Donate](https://img.shields.io/badge/donate-paypal-yellowgreen.svg)](https://www.paypal.com/paypalme2/usafbeaty?locale.x=en_US)
+
+# Prerequisites
+
+The following are required for Canvas to operate. The installation's make file will install each of these individually if they are not already pre-installed.
+
+* `Apache2`
+
+* `php`
+
+* `node v8.2.1`
+
+* `fbi`
+
+* `HAP-NodeJS`
 
 # Raspberry Pi Canvas 
 
