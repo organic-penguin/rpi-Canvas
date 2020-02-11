@@ -56,6 +56,8 @@ Install the web application to your iPhone homescreen to quickly access your Ras
 
 * Select *Add*
 
+![Web App Install](images/web_app_install.png)
+
 
 # Troubleshooting
 
@@ -70,6 +72,12 @@ The fbi framework that is used to publish images to the HDMI output requires a '
 * Add Google Assistant Control
 
 * Correct minor UI Element Issues
+
+* Android Web App
+
+* Control HDMI through Web App
+
+* Sync overall HDMI status to settings.json so Alexa/Google/Web/HDMI remain in sync
 
 # Credits
 [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) by KhaosT
