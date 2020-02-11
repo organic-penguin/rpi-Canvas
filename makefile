@@ -3,14 +3,8 @@ all: install_prerequisites apply_config_modifications install_Canvas install_hom
 install_prerequisites:
 	@echo "Getting Updates"
 	sudo apt-get update -y
-	@echo "Install Apache"
-	sudo apt-get install apache2 -y
-	@echo "Installing PHP"
-	sudo apt-get install php -y
-	@echo "Installing FBI"
-	sudo apt-get install fbi -y
-	@echo "Installing JQ"
-	sudo apt-get install jq -y
+	@echo "Install Apache, PHP, FBI, and JQ"
+	sudo apt-get install apache2 php fbi jq -y
 
 apply_config_modifications:
 	@echo "Installing modifications to configuration files for Apache"
@@ -33,6 +27,14 @@ install_Canvas:
 install_homekit:
 	@echo "Installing Homekit"
 	sh /home/pi/rpi-Canvas/install_homekit.sh
+	sudo apt-get remove node nodejs nodejs-legacy -y
+	sudo apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
+	cd /home/pi/rpi-Canvas/support_frameworks/node-v8.2.1-linux-armv6l/
+	sudo cp -R * /usr/local/
+	sudo apt-get install gcc g++ make -y
+	sudo npm install -g node-gyp
+	cd /home/pi/rpi-Canvas/support_frameworks/HAP-NodeJS/
+	sudo npm install
 	@echo "Installing NPM Forever"
 	sudo npm install forever -g
 	@echo "Installing sleep"
