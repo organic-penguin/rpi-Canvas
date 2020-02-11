@@ -29,8 +29,7 @@ install_homekit:
 	@echo "Installing Homekit"
 	sudo apt-get remove node nodejs nodejs-legacy -y
 	sudo apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
-	cd /home/pi/rpi-Canvas/support_frameworks/node-v8.2.1-linux-armv6l/
-	sudo cp -R * /usr/local/
+	sudo cp -r /home/pi/rpi-Canvas/support_frameworks/node-v8.2.1-linux-armv6l/* /usr/local
 	sudo apt-get install gcc g++ make -y
 	sudo npm install -g node-gyp
 	cd /home/pi/rpi-Canvas/support_frameworks/HAP-NodeJS/
