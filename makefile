@@ -32,8 +32,7 @@ install_homekit:
 	sudo cp -r /home/pi/rpi-Canvas/support_frameworks/node-v8.2.1-linux-armv6l/* /usr/local
 	sudo apt-get install gcc g++ make -y
 	sudo npm install -g node-gyp
-	cd /home/pi/rpi-Canvas/support_frameworks/HAP-NodeJS/
-	sudo npm install
+	sudo npm install /home/pi/rpi-Canvas/support_frameworks/HAP-NodeJS/
 	@echo "Installing NPM Forever"
 	sudo npm install forever -g
 	@echo "Installing sleep"

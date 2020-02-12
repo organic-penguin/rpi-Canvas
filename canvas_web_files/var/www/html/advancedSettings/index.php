@@ -128,7 +128,7 @@
 	</form>
 
 	<form id="generateWelcomeScreen" style="text-align:center; display: inline" action="gen_GettingStartedImage.php">
-        <input id="generateWelcomeScreen" class="w3-button w3-round-xlarge" style="margin-top:10px; text-align:center; color;white; background-color: #456096;" type="submit" form="generateWelcomeScreen" value="Generate Welcome Screen">
+        <input id="generateWelcomeScreen" class="w3-button w3-round-xlarge" style="margin-top:10px; text-align:center; color:white; background-color: #456096;" type="submit" form="generateWelcomeScreen" value="Generate Welcome Screen">
 	</form>
 
 	

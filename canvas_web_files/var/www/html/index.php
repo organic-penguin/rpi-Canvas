@@ -77,7 +77,7 @@
 		<div class="w3-modal-content w3-round-xlarge" style="height: 500px">
 			<div class="container">
 			<div class="w3-center upload-demo-wrap">
-				<div id="upload-demo"></div>
+				<div style="padding: 50px 0;" id="upload-demo"></div>
 				<button class="w3-center upload-result" id="croppieResultButton" onClick="croppieResultsLoading()">Result</button>
 				<button style="display:none; background-color: yellow; color:black" class="w3-center" id="croppieResultLoading"><i class="fa fa-circle-o-notch fa-spin"></i> Results Loading</button>
 				<button class="w3-center w3-red"><a style="text-decoration:none" href="/">Close</a></button>
