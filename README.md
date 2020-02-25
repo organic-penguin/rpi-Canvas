@@ -58,6 +58,13 @@ Install the web application to your iPhone homescreen to quickly access your Ras
 
 ![Web App Install](images/web_app_install.png)
 
+**Adjust Image Cropping Size/Ratio**
+
+Use your favorite text editor and edit lines 67 and 68 for width and height contained at
+
+```/var/www/html/croppie/script.js```
+
+You will need to clear your browser cache to see changes
 
 # Troubleshooting
 
@@ -90,4 +97,8 @@ The fbi framework that is used to publish images to the HDMI output requires a '
 
 [Croppie](https://github.com/foliotek/croppie) by Foliotek
 
+# Use Case Example
+
+A LCD monitor mounted to a matted picture frame
+![Mounted Monitor](images/canvasFront.png)
 

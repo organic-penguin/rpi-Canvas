@@ -12,27 +12,26 @@ var FAKE_OUTLET = {
     setPowerOn: function(on) {
     console.log("Turning the %s!...", on ? "on" : "off");
     if (on) {
+        //Turn ON
           FAKE_OUTLET.powerOn = true;
           if(err) { return console.log(err); }
           console.log("...%s is now on.");
-	  exec('sudo /opt/vc/bin/tvservice -p');
-	  sleep.sleep(1);
-	  //console.log("just got past the sleep");
-          exec('sudo killall fbi');
-	  sleep.sleep(1);
-	  exec('sudo sh /var/www/html/pictureFrame.sh');
-	  fs.writeFileSync("onoff.json", JSON.stringify({onoff: 1}));
-
+          exec('sudo killall fbi'); //Kill all previous instances of fbi
+          sleep.msleep(500);
+          exec('sudo /opt/vc/bin/tvservice -p'); //Enable HDMI ouptut
+          sleep.msleep(500);
+          exec('sudo sh /var/www/html/pictureFrame.sh'); //Run script for displaying images
+	  //pictureFrame.sh must run after /opt/vc/bin/tvservice -p else display is only black
+          fs.writeFileSync("onoff.json", JSON.stringify({onoff: 1})); //Write JSON status of on
     } else {
+	//Turn OFF
           FAKE_OUTLET.powerOn = false;
           if(err) { return console.log(err); }
           console.log("...%s is now off.");
-	  exec('sudo killall fbi');
+	  exec('sudo /opt/vc/bin/tvservice -o'); //Power off HDMI
 	  sleep.msleep(500);
-	  exec('sudo /opt/vc/bin/tvservice -o');
-	  sleep.msleep(500);
-	  exec('sudo killall fbi');
-	  fs.writeFileSync("onoff.json", JSON.stringify({onoff: 0}));
+	  exec('sudo killall fbi'); //Kill all instances of fbi image display
+	  fs.writeFileSync("onoff.json", JSON.stringify({onoff: 0})); //Write JSON status of off
     }
   },
     identify: function() {
@@ -47,7 +46,7 @@ var outletUUID = uuid.generate('hap-nodejs:accessories:Outlet');
 
 // This is the Accessory that we'll return to HAP-NodeJS that represents our fake light.
 var outlet = exports.accessory = new Accessory('rpi-Canvas', outletUUID);
-outlet.name= "rpi-Canvas";
+outlet.name= "Canvas";
 // Add properties for publishing (in case we're using Core.js and not BridgedCore.js)
 outlet.username = "1A:2B:3C:2C:2D:FF";
 outlet.pincode = "867-53-099";
@@ -68,7 +67,7 @@ outlet.on('identify', function(paired, callback) {
 // Add the actual outlet Service and listen for change events from iOS.
 // We can see the complete list of Services and Characteristics in `lib/gen/HomeKitTypes.js`
 outlet
-  .addService(Service.Outlet, "rpi-Canvas") // services exposed to the user should have "names" like "Fake Light" for us
+  .addService(Service.Outlet, "Canvas") // services exposed to the user should have "names" like "Fake Light" for us
   .getCharacteristic(Characteristic.On)
   .on('set', function(value, callback) {
     FAKE_OUTLET.setPowerOn(value);

@@ -59,7 +59,7 @@ var CropImage = (function() {
 		        swal("Sorry - you're browser doesn't support the FileReader API");
 		    }
 		}
-
+		//Edit viewport ratio's and size here
 		$uploadCrop = $('#upload-demo').croppie({
 			viewport: {
 				width: 300,

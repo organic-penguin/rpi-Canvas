@@ -7,12 +7,12 @@
 	<body style="background-color: #456096">
 
 		<?php
+		//Receive image path from image select form contained in index.php
 		$picturePath = $_GET['name'];
 		echo "$picturePath";
-
 		$JSONContents = file_get_contents('/var/www/html/settings.json');
 		$contentsDecoded = json_decode($JSONContents, true);
-		$contentsDecoded['rotating'] = $picturePath;
+		$contentsDecoded['rotating'] = $picturePath; //Assign the 'rotating' variable from settings.json a value of the path of the image selected
 		$jsonEditComplete = json_encode($contentsDecoded);
 		file_put_contents('/var/www/html/settings.json', $jsonEditComplete);
 
