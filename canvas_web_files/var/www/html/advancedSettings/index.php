@@ -131,19 +131,7 @@
         <input id="generateWelcomeScreen" class="w3-button w3-round-xlarge" style="margin-top:10px; text-align:center; color:white; background-color: #456096;" type="submit" form="generateWelcomeScreen" value="Generate Welcome Screen">
 	</form>
 
-	
-	<div style="column-count:2">
-	<h2>Alexa: </h2> 
-	<label style="margin-top:10px" class="switch"><input type="checkbox" onclick="enableSaveChange()" form="saveAdvancedSettingsForm" name="alexaToggle" id="alexaToggle"><div class="slider round"><!--ADDED HTML --><span class="on">ON</span><span class="off">OFF</span><!--END--></div></label>
-	</div>
-	<div style="column-count:2">
-	<h2>Homekit:</h2>
-	<label style="margin-top:10px" class="switch"><input type="checkbox" onclick="enableSaveChange()" form="saveAdvancedSettingsForm" name="homekitToggle" id="homekitToggle"><div class="slider round"><!--ADDED HTML --><span class="on">ON</span><span class="off">OFF</span><!--END--></div></label>
-	</div>
-	<form id="saveAdvancedSettingsForm" action="saveAdvancedSettings.php" method="GET" >
-	</form>
-	<button class="w3-button w3-round-xlarge" style="margin-top: 10px; color: white; background-color: #ca2222;" id="cancelAdvancedSettings" onClick="location.href='/'">Cancel</button>
-	<input disabled class="w3-button w3-round-xlarge" onclick="saveAdvancedSettingsButton()" style="margin-top: 10px; color: white; background-color: #2ab934;" form="saveAdvancedSettingsForm" id="saveAdvancedSettings" type="submit" value="Save Changes">
+	<button class="w3-center w3-button w3-round-xlarge" style="margin-top: 10px; color: white; background-color: #ca2222;" id="cancelAdvancedSettings" onClick="location.href='/'">Cancel</button>
 
 
 	</div>
